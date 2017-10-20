@@ -17,7 +17,7 @@
   <email>chuck@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-17</date>
+ <date>2017-10-20</date>
  <version>
   <release>2.0.5</release>
   <api>1.0.0</api>
@@ -75,7 +75,6 @@
       <file name="bootstrap.php" role="test" />
       <file name="FilterRunnerTest.php" role="test" />
       <file name="MockRequestTest.php" role="test" />
-      <file name="phpunit.xml" role="test" />
       <file name="StreamTest.php" role="test" />
      </dir> <!-- /test/Horde/Controller -->
     </dir> <!-- /test/Horde -->
@@ -174,7 +173,6 @@
    <install as="Horde/Controller/bootstrap.php" name="test/Horde/Controller/bootstrap.php" />
    <install as="Horde/Controller/FilterRunnerTest.php" name="test/Horde/Controller/FilterRunnerTest.php" />
    <install as="Horde/Controller/MockRequestTest.php" name="test/Horde/Controller/MockRequestTest.php" />
-   <install as="Horde/Controller/phpunit.xml" name="test/Horde/Controller/phpunit.xml" />
    <install as="Horde/Controller/StreamTest.php" name="test/Horde/Controller/StreamTest.php" />
   </filelist>
  </phprelease>
@@ -408,7 +406,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-17</date>
+   <date>2017-10-20</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
    <notes>
 * 
