@@ -1,5 +1,5 @@
 {
-    "name": "horde/horde-controller",
+    "name": "horde/controller",
     "description": "Horde Controller libraries",
     "type": "library",
     "homepage": "https://pear.horde.org",
@@ -26,14 +26,14 @@
     ],
     "require": {
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Exception": "^2@stable",
-        "pear-pear.horde.org/Horde_Injector": "^2@stable",
-        "pear-pear.horde.org/Horde_Log": "^2@stable",
-        "pear-pear.horde.org/Horde_Support": "^2@stable",
-        "pear-pear.horde.org/Horde_Util": "^2@stable"
+        "pear-pear.horde.org/Horde_Exception": "^2",
+        "pear-pear.horde.org/Horde_Injector": "^2",
+        "pear-pear.horde.org/Horde_Log": "^2",
+        "pear-pear.horde.org/Horde_Support": "^2",
+        "pear-pear.horde.org/Horde_Util": "^2"
     },
     "suggest": {
-        "pear-pear.horde.org/Horde_Test": "^2.1@stable",
+        "pear-pear.horde.org/Horde_Test": "^2.1",
         "ext-mbstring": "*",
         "ext-zlib": "*"
     },
