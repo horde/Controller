@@ -17,7 +17,7 @@
   <email>chuck@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-20</date>
+ <date>2017-10-27</date>
  <version>
   <release>2.0.5</release>
   <api>1.0.0</api>
@@ -31,6 +31,13 @@
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
+   <dir name="doc">
+    <dir name="Horde">
+     <dir name="Controller">
+      <file name="CHANGES" role="doc" />
+     </dir> <!-- /doc/Horde/Controller -->
+    </dir> <!-- /doc/Horde -->
+   </dir> <!-- /doc -->
    <dir name="lib">
     <dir name="Horde">
      <dir name="Controller">
@@ -145,6 +152,7 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="CHANGES" name="doc/Horde/Controller/CHANGES" />
    <install as="Horde/Controller.php" name="lib/Horde/Controller.php" />
    <install as="Horde/Controller/Base.php" name="lib/Horde/Controller/Base.php" />
    <install as="Horde/Controller/Exception.php" name="lib/Horde/Controller/Exception.php" />
@@ -405,7 +413,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-20</date>
+   <date>2017-10-27</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
    <notes>
    </notes>
