@@ -3,7 +3,7 @@
  <name>Horde_Controller</name>
  <channel>pear.horde.org</channel>
  <extends>Controller</extends>
- <summary>Horde Controller libraries</summary>
+ <summary>Controller library</summary>
  <description>The controller part of an MVC system for Horde.</description>
  <lead>
   <name>Mike Naberezny</name>
@@ -15,9 +15,9 @@
   <name>Chuck Hagenbuch</name>
   <user>chuck</user>
   <email>chuck@horde.org</email>
-  <active>yes</active>
+  <active>no</active>
  </lead>
- <date>2017-10-30</date>
+ <date>2017-11-14</date>
  <version>
   <release>2.0.5</release>
   <api>1.0.0</api>
@@ -416,7 +416,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-30</date>
+   <date>2017-11-14</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
    <notes>
 * 
