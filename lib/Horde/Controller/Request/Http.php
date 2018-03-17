@@ -70,6 +70,15 @@ class Horde_Controller_Request_Http implements Horde_Controller_Request
         return $_POST;
     }
 
+    /**
+     * The request body if it is not form-encoded
+     * @returns Horde_Stream
+     */
+    public function getRequestBody()
+    {
+        return new Horde_Stream_Existing(array('stream' => 'php://input'));
+    }    
+
     public function getCookieVars()
     {
         return $_COOKIE;
