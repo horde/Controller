@@ -105,6 +105,6 @@ class Horde_Controller_Request_Mock extends Horde_Controller_Request_Http
      */
     public function getRequestBody()
     {
-        return new Horde_Stream_String(array('string' => $this->getVars('REQUEST'));
+        return new Horde_Stream_String(array('string' => $this->getVars('REQUEST')));
     }
 }
