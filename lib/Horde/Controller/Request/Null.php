@@ -83,4 +83,13 @@ class Horde_Controller_Request_Null implements Horde_Controller_Request
     public function getSessionId()
     {
     }
+    
+    /**
+     * The request body if it is not form-encoded
+     * @returns Horde_Stream
+     */
+    public function getRequestBody()
+    {
+    }
+    
 }

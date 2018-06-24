@@ -98,4 +98,13 @@ class Horde_Controller_Request_Mock extends Horde_Controller_Request_Http
     {
         return $this->getVars('REQUEST');
     }
+    
+    /**
+     * The request body if it is not form-encoded
+     * @returns Horde_Stream
+     */
+    public function getRequestBody()
+    {
+        return new Horde_Stream_String(array('string' => $this->getVars('REQUEST')));
+    }
 }
