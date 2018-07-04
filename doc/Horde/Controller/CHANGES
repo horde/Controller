@@ -1,6 +1,10 @@
-----------
-v2.0.5-git
-----------
+------
+v2.0.5
+------
+
+[mjr] Add Request Body Stream to interface (PR #1, Ralf Lang
+      <lang@b1-systems.de>).
+
 
 
 ------
