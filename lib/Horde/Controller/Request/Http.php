@@ -76,7 +76,7 @@ class Horde_Controller_Request_Http implements Horde_Controller_Request
      */
     public function getRequestBody()
     {
-        return new Horde_Stream_Existing(array('stream' => 'php://input'));
+        return new Horde_Stream_Existing(['stream' => fopen("php://input", "r")]);
     }    
 
     public function getCookieVars()
