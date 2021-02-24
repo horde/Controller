@@ -1,6 +1,6 @@
-------
-v2.0.5
-------
+------------
+v3.0.0alpha1
+------------
 
 [mjr] Add Request Body Stream to interface (PR #1, Ralf Lang
       <lang@b1-systems.de>).
