@@ -41,9 +41,6 @@
     "autoload": {
         "psr-0": {
             "Horde_Controller": "lib/"
-        },
-        "psr-4": {
-            "Horde\\Controller\\": "src/"
         }
     }
 }
