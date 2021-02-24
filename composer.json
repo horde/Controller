@@ -26,15 +26,15 @@
     ],
     "require": {
         "horde/horde-installer-plugin": "*",
-        "php": "^5.3 || ^7",
-        "horde/exception": "^2",
-        "horde/injector": "^2",
-        "horde/log": "^2",
-        "horde/support": "^2",
-        "horde/util": "^2"
+        "php": "^7",
+        "horde/exception": "^3",
+        "horde/injector": "^3",
+        "horde/log": "^3",
+        "horde/support": "^3",
+        "horde/util": "^3"
     },
     "suggest": {
-        "horde/test": "^2.1",
+        "horde/test": "^3",
         "ext-mbstring": "*",
         "ext-zlib": "*"
     },
