@@ -10,6 +10,9 @@
  * @author     Gunnar Wrobel <wrobel@pardus.de>
  * @license    http://www.horde.org/licenses/bsd
  */
+namespace Horde\Controller;
+use Horde_Test_Case as TestCase;
+use \Horde_Controller_Request_Mock;
 
 /**
  * Test the mock request handler.
@@ -22,7 +25,7 @@
  * @author     Gunnar Wrobel <wrobel@pardus.de>
  * @license    http://www.horde.org/licenses/bsd
  */
-class Horde_Controller_MockRequestTest extends Horde_Test_Case
+class MockRequestTest extends TestCase
 {
     public function testEmptyGetPath()
     {

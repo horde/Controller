@@ -1,6 +1,12 @@
 <?php
 
-class Horde_Controller_StreamTest extends Horde_Test_Case
+namespace Horde\Controller;
+use Horde_Test_Case as TestCase;
+use \Horde_Support_StringStream;
+use \Horde_Controller_Response;
+use \Horde_Controller_ResponseWriter_Web;
+
+class StreamTest extends TestCase
 {
     public function testStreamOutput()
     {
