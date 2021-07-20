@@ -1,5 +1,4 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/controller",
     "description": "Controller library",
     "type": "library",
@@ -17,7 +16,7 @@
             "role": "lead"
         }
     ],
-    "time": "2021-03-13",
+    "time": "2021-07-20",
     "repositories": [
         {
             "type": "composer",
@@ -32,14 +31,19 @@
         "horde/support": "^3 || dev-FRAMEWORK_6_0",
         "horde/util": "^3 || dev-FRAMEWORK_6_0"
     },
+    "require-dev": {},
     "suggest": {
         "horde/test": "^3 || dev-FRAMEWORK_6_0",
+        "horde/http": "* || dev-FRAMEWORK_6_0",
         "ext-mbstring": "*",
         "ext-zlib": "*"
     },
     "autoload": {
         "psr-0": {
             "Horde_Controller": "lib/"
+        },
+        "psr-4": {
+            "Horde\\Controller\\": "src/"
         }
     }
 }
