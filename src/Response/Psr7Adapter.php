@@ -14,6 +14,7 @@ namespace Horde\Controller\Response;
 use \Horde_Controller_Response as H5Response;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\StreamFactoryInterface;
 
 /**
  * Create a PSR-7 Response from a H5 Controller Response
@@ -24,20 +25,24 @@ use Psr\Http\Message\ResponseInterface;
  * @license   http://www.horde.org/licenses/bsd BSD
  * @package   Controller
  */
-class Psr7Adapter implements H5Response
+class Psr7Adapter
 {
     private ResponseFactoryInterface $responseFactory;
-    public function __construct(ResponseFactoryInterface $responseFactory)
+    private StreamFactoryInterface $streamFactory;
+
+    public function __construct(ResponseFactoryInterface $responseFactory, StreamFactoryInterface $streamFactory)
     {
-        $this->responseFactory = $responseFactory;        
+        $this->responseFactory = $responseFactory;
+        $this->streamFactory = $streamFactory;
     }
 
     public function createPsr7Response(H5Response $response): ResponseInterface
     {
         $psrResponse = $this->responseFactory->createResponse();
-        $psrResponse = $psrResponse->withBody($response->getBody());
+        $stream = $this->streamFactory->createStream($response->getBody());
+        $psrResponse = $psrResponse->withBody($stream);
         foreach ($response->getHeaders() as $name => $value) {
-            $psrResponse = $psrResponse->withHeader($name, $value);            
+            $psrResponse = $psrResponse->withHeader($name, $value);
         }
         return $psrResponse;
     }

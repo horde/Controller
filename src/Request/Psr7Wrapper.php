@@ -36,14 +36,14 @@ class Psr7Wrapper implements H5Request
      */
     public function getPath()
     {
-        $this->request->getUri()->getPath();
+        return $this->request->getUri()->getPath();
     }
 
     /**
      */
     public function getMethod()
     {
-        $this->request->getMethod();
+        return $this->request->getMethod();
     }
 
     /**
@@ -111,5 +111,5 @@ class Psr7Wrapper implements H5Request
         return new StringStream(
             ['string' => $this->request->getBody()->getContents()]
         );
-    }    
+    }
 }
