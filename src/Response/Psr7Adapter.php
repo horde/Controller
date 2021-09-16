@@ -39,7 +39,9 @@ class Psr7Adapter
     public function createPsr7Response(H5Response $response): ResponseInterface
     {
         $psrResponse = $this->responseFactory->createResponse();
-        $stream = $this->streamFactory->createStream($response->getBody());
+        // TODO: we assume the body will be string or null. That might be wrong.
+        $bodyStr = $response->getBody() ?? '';
+        $stream = $this->streamFactory->createStream($bodyStr);
         $psrResponse = $psrResponse->withBody($stream);
         foreach ($response->getHeaders() as $name => $value) {
             $psrResponse = $psrResponse->withHeader($name, $value);
