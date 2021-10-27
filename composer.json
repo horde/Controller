@@ -16,7 +16,7 @@
             "role": "lead"
         }
     ],
-    "time": "2021-07-20",
+    "time": "2021-10-27",
     "repositories": [
         {
             "type": "composer",
@@ -24,17 +24,17 @@
         }
     ],
     "require": {
-        "php": "^7",
-        "horde/exception": "^3 || dev-FRAMEWORK_6_0",
-        "horde/injector": "^3 || dev-FRAMEWORK_6_0",
-        "horde/log": "^3 || dev-FRAMEWORK_6_0",
-        "horde/support": "^3 || dev-FRAMEWORK_6_0",
-        "horde/util": "^3 || dev-FRAMEWORK_6_0"
+        "php": "^7.4 || ^8",
+        "horde/exception": "^3",
+        "horde/injector": "^3",
+        "horde/log": "^3",
+        "horde/support": "^3",
+        "horde/util": "^3"
     },
     "require-dev": {},
     "suggest": {
-        "horde/test": "^3 || dev-FRAMEWORK_6_0",
-        "horde/http": "* || dev-FRAMEWORK_6_0",
+        "horde/test": "^3",
+        "horde/http": "*",
         "ext-mbstring": "*",
         "ext-zlib": "*"
     },
@@ -44,6 +44,11 @@
         },
         "psr-4": {
             "Horde\\Controller\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Horde\\Controller\\Test\\": "test/"
         }
     }
 }

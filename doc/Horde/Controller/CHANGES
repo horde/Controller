@@ -2,7 +2,11 @@
 v3.0.0alpha4
 ------------
 
-
+[rla] Whitelisted PHP 8 for this component.
+[rla] Added compat layer with new PSR-15 middleware system.
+[rla] Add adapter to create PSR-7 responses out of Controller_Responses.
+[rla] Add wrapper to use PSR-7 requests in Controllers.
+|+
 
 
 ------------

@@ -17,7 +17,7 @@
   <email>chuck@horde.org</email>
   <active>no</active>
  </lead>
- <date>2021-03-13</date>
+ <date>2021-10-27</date>
  <version>
   <release>3.0.0alpha4</release>
   <api>3.0.0alpha1</api>
@@ -28,10 +28,21 @@
  </stability>
  <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
  <notes>
-* 
+* [rla] Whitelisted PHP 8 for this component.
+* [rla] Added compat layer with new PSR-15 middleware system.
+* [rla] Add adapter to create PSR-7 responses out of Controller_Responses.
+* [rla] Add wrapper to use PSR-7 requests in Controllers.
+* |+
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
+   <dir name=".github">
+    <dir name="workflows">
+     <file name="ci.yml" role="php" />
+     <file name="phpdoc.yml" role="php" />
+     <file name="update-satis.yml" role="php" />
+    </dir> <!-- /.github/workflows -->
+   </dir> <!-- /.github -->
    <dir name="doc">
     <dir name="Horde">
      <dir name="Controller">
@@ -75,6 +86,14 @@
      <file name="Controller.php" role="php" />
     </dir> <!-- /lib/Horde -->
    </dir> <!-- /lib -->
+   <dir name="src">
+    <dir name="Request">
+     <file name="Psr7Wrapper.php" role="php" />
+    </dir> <!-- /src/Request -->
+    <dir name="Response">
+     <file name="Psr7Adapter.php" role="php" />
+    </dir> <!-- /src/Response -->
+   </dir> <!-- /src -->
    <dir name="test">
     <dir name="Horde">
      <dir name="Controller">
@@ -92,9 +111,9 @@
  <dependencies>
   <required>
    <php>
-    <min>7.0.0</min>
-    <max>8.0.0alpha1</max>
-    <exclude>8.0.0alpha1</exclude>
+    <min>7.4.0</min>
+    <max>9.0.0alpha1</max>
+    <exclude>9.0.0alpha1</exclude>
    </php>
    <pearinstaller>
     <min>1.7.0</min>
@@ -111,6 +130,9 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="workflows/ci.yml" name=".github/workflows/ci.yml" />
+   <install as="workflows/phpdoc.yml" name=".github/workflows/phpdoc.yml" />
+   <install as="workflows/update-satis.yml" name=".github/workflows/update-satis.yml" />
    <install as="CHANGES" name="doc/Horde/Controller/CHANGES" />
    <install as="Horde/Controller.php" name="lib/Horde/Controller.php" />
    <install as="Horde/Controller/Base.php" name="lib/Horde/Controller/Base.php" />
@@ -135,6 +157,8 @@
    <install as="Horde/Controller/SettingsExporter/Default.php" name="lib/Horde/Controller/SettingsExporter/Default.php" />
    <install as="Horde/Controller/UrlWriter.php" name="lib/Horde/Controller/UrlWriter.php" />
    <install as="LICENSE" name="LICENSE" />
+   <install as="Request/Psr7Wrapper.php" name="src/Request/Psr7Wrapper.php" />
+   <install as="Response/Psr7Adapter.php" name="src/Response/Psr7Adapter.php" />
    <install as="Horde/Controller/AllTests.php" name="test/Horde/Controller/AllTests.php" />
    <install as="Horde/Controller/bootstrap.php" name="test/Horde/Controller/bootstrap.php" />
    <install as="Horde/Controller/FilterRunnerTest.php" name="test/Horde/Controller/FilterRunnerTest.php" />
@@ -143,25 +167,6 @@
   </filelist>
  </phprelease>
  <changelog>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
   <release>
    <version>
     <release>0.1.0</release>
@@ -461,7 +466,11 @@
    <date>2021-03-13</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD-2-Clause</license>
    <notes>
-* 
+* [rla] Whitelisted PHP 8 for this component.
+* [rla] Added compat layer with new PSR-15 middleware system.
+* [rla] Add adapter to create PSR-7 responses out of Controller_Responses.
+* [rla] Add wrapper to use PSR-7 requests in Controllers.
+* |+
    </notes>
   </release>
  </changelog>

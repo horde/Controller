@@ -4,11 +4,13 @@
   state:
     release: alpha
     api: alpha
-  date: 2021-03-13
+  date: 2021-10-27
   license:
     identifier: BSD-2-Clause
     uri: http://www.horde.org/licenses/bsd
   notes: |
+    [rla] Whitelisted PHP 8 for this component.
+    [rla] Added compat layer with new PSR-15 middleware system.
     [rla] Add adapter to create PSR-7 responses out of Controller_Responses.
     [rla] Add wrapper to use PSR-7 requests in Controllers.
     |+
