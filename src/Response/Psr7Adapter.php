@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright 2008-2021 Horde LLC (http://www.horde.org/)
  *
@@ -10,8 +11,10 @@
  * @license  http://www.horde.org/licenses/bsd BSD
  * @package  Controller
  */
+
 namespace Horde\Controller\Response;
-use \Horde_Controller_Response as H5Response;
+
+use Horde_Controller_Response as H5Response;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamFactoryInterface;
@@ -44,8 +47,33 @@ class Psr7Adapter
         $stream = $this->streamFactory->createStream($bodyStr);
         $psrResponse = $psrResponse->withBody($stream);
         foreach ($response->getHeaders() as $name => $value) {
-            $psrResponse = $psrResponse->withHeader($name, $value);
+            if ($res = $this->getStatusFromHeader($name, $value)) {
+                [$code, $reason] = $res;
+                $psrResponse = $psrResponse->withStatus($code, $reason);
+            } else {
+                $psrResponse = $psrResponse->withHeader($name, $value);
+            }
         }
         return $psrResponse;
+    }
+
+    protected function getStatusFromHeader(string $name, $value): ?array
+    {
+        if (!preg_match('/^HTTP\/(\d+\.\d+) (\d+) ?$/', $name, $match)) {
+            return null;
+        }
+        $code = $match[2];
+        if (is_numeric($code)) {
+            $code = intval($code);
+        } else {
+            // fallback; this should not happen
+            $code = 200;
+        }
+        if (is_string($value)) {
+            $reason = $value;
+        } else {
+            $reason = '';
+        }
+        return [$code, $reason];
     }
 }
