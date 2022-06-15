@@ -1,5 +1,4 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/controller",
     "description": "Controller library",
     "type": "library",
@@ -17,11 +16,11 @@
             "role": "lead"
         }
     ],
-    "time": "2021-10-27",
+    "time": "2022-06-15",
     "repositories": [
         {
             "type": "composer",
-            "url": "https://horde-satis.maintaina.com/"
+            "url": "https://horde-satis.maintaina.com"
         }
     ],
     "require": {
@@ -32,9 +31,10 @@
         "horde/support": "^3 || dev-FRAMEWORK_6_0",
         "horde/util": "^3 || dev-FRAMEWORK_6_0"
     },
-    "require-dev": {},
+    "require-dev": {
+        "horde/test": "^3 || dev-FRAMEWORK_6_0"
+    },
     "suggest": {
-        "horde/test": "^3 || dev-FRAMEWORK_6_0",
         "horde/http": "* || dev-FRAMEWORK_6_0",
         "ext-mbstring": "*",
         "ext-zlib": "*"
@@ -51,5 +51,11 @@
         "psr-4": {
             "Horde\\Controller\\Test\\": "test/"
         }
-    }
+    },
+    "config": {
+        "allow-plugins": {
+            "horde/horde-installer-plugin": true
+        }
+    },
+    "minimum-stability": "dev"
 }
