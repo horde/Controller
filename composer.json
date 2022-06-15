@@ -32,7 +32,8 @@
         "horde/util": "^3 || dev-FRAMEWORK_6_0"
     },
     "require-dev": {
-        "horde/test": "^3 || dev-FRAMEWORK_6_0"
+        "horde/test": "^3 || dev-FRAMEWORK_6_0",
+        "horde/http": "* || dev-FRAMEWORK_6_0"
     },
     "suggest": {
         "horde/http": "* || dev-FRAMEWORK_6_0",

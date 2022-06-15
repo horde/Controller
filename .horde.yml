@@ -46,3 +46,4 @@ dependencies:
   dev:
     composer:
       horde/test: ^3
+      horde/http: '*'
