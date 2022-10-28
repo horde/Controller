@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright 2008-2021 Horde LLC (http://www.horde.org/)
  *
@@ -10,10 +11,12 @@
  * @license  http://www.horde.org/licenses/bsd BSD
  * @package  Controller
  */
+
 namespace Horde\Controller\Request;
-use \Horde_Controller_Request as H5Request;
+
+use Horde_Controller_Request as H5Request;
 use Psr\Http\Message\ServerRequestInterface;
-use \Horde_Stream_String as StringStream;
+use Horde_Stream_String as StringStream;
 
 /**
  * Wrap a PSR-7 Request inside a H5 request
@@ -91,7 +94,7 @@ class Psr7Wrapper implements H5Request
         return array_merge(
             $this->getGetVars(),
             $this->getPostVars(),
-            $this->getCookieVars
+            $this->getCookieVars()
         );
     }
 
