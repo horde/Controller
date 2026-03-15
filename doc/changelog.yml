@@ -9,7 +9,6 @@
     identifier: BSD-2-Clause
     uri: http://www.horde.org/licenses/bsd
   notes: |+
-    
 3.0.0alpha4:
   api: 3.0.0alpha1
   state:
@@ -57,6 +56,33 @@
   notes: |+
     [mjr] Add Request Body Stream to interface (PR #1, Ralf Lang <lang@b1-systems.de>).
     
+3.0.0-beta1:
+  api: 3.0.0-beta1
+  state:
+    release: beta
+    api: beta
+  date: 2026-03-15
+  license:
+    identifier: BSD-2-Clause
+    uri: https://spdx.org/licenses/BSD-2-Clause.html
+  notes: |-
+    fix Psr7Wrapper::getRequestVars typo
+    allow horde-installer-plugin in release pipeline
+    adjust CI workflow for the unittest restructure
+    unittests for Psr7Adapter special status code handling
+    special handling for status header in Psr7Adapter
+    added release workflow
+    updated to modern unittest setup
+    Update metadata and workflows for PHP 8 support
+    Development mode for Controller-3.0.0alpha5
+    Released Controller-3.0.0alpha4
+    fixed createPsr7Response in case H5Response body is null
+    Response/Psr7Adapter does not implement Horde_Controller_Response
+    Add PSR7 Bridges.
+    Add CI job for satis repo update
+    ci.yml added, bootstrap adjusted
+    no errors left
+    Development mode for Controller-3.0.0alpha5
 2.0.4:
   api: 1.0.0
   state:
@@ -101,17 +127,6 @@
     uri: http://www.horde.org/licenses/bsd
   notes: |
     [mms] Use new Horde_Test layout.
-2.0.0:
-  api: 1.0.0
-  state:
-    release: stable
-    api: stable
-  date: 2012-10-30
-  license:
-    identifier: BSD-2-Clause
-    uri: http://www.horde.org/licenses/bsd
-  notes: |
-    First stable release for Horde 5.
 2.0.0beta2:
   api: 1.0.0
   state:
@@ -145,6 +160,17 @@
     uri: http://www.horde.org/licenses/bsd
   notes: |
     First alpha release for Horde 5.
+2.0.0:
+  api: 1.0.0
+  state:
+    release: stable
+    api: stable
+  date: 2012-10-30
+  license:
+    identifier: BSD-2-Clause
+    uri: http://www.horde.org/licenses/bsd
+  notes: |
+    First stable release for Horde 5.
 1.0.2:
   api: 1.0.0
   state:
@@ -169,39 +195,6 @@
     [gwr] Fixed the debug response writer.
     [gwr] Added a mock request class.
     [gwr] Allow passing the response body as stream.
-1.0.0:
-  api: 1.0.0
-  state:
-    release: stable
-    api: stable
-  date: 2011-04-06
-  license:
-    identifier: BSD-2-Clause
-    uri: http://www.horde.org/licenses/bsd
-  notes: |
-    First stable release for Horde 4.
-1.0.0RC2:
-  api: 1.0.0
-  state:
-    release: beta
-    api: beta
-  date: 2011-03-29
-  license:
-    identifier: BSD-2-Clause
-    uri: http://www.horde.org/licenses/bsd
-  notes: |
-    Second release candidate for Horde 4.
-1.0.0RC1:
-  api: 1.0.0
-  state:
-    release: beta
-    api: beta
-  date: 2011-03-22
-  license:
-    identifier: BSD-2-Clause
-    uri: http://www.horde.org/licenses/bsd
-  notes: |
-    First release candidate for Horde 4.
 1.0.0beta1:
   api: 1.0.0
   state:
@@ -224,6 +217,39 @@
     uri: http://www.horde.org/licenses/bsd
   notes: |
     First alpha release for Horde 4.
+1.0.0RC2:
+  api: 1.0.0
+  state:
+    release: beta
+    api: beta
+  date: 2011-03-29
+  license:
+    identifier: BSD-2-Clause
+    uri: http://www.horde.org/licenses/bsd
+  notes: |
+    Second release candidate for Horde 4.
+1.0.0RC1:
+  api: 1.0.0
+  state:
+    release: beta
+    api: beta
+  date: 2011-03-22
+  license:
+    identifier: BSD-2-Clause
+    uri: http://www.horde.org/licenses/bsd
+  notes: |
+    First release candidate for Horde 4.
+1.0.0:
+  api: 1.0.0
+  state:
+    release: stable
+    api: stable
+  date: 2011-04-06
+  license:
+    identifier: BSD-2-Clause
+    uri: http://www.horde.org/licenses/bsd
+  notes: |
+    First stable release for Horde 4.
 0.1.0:
   api: 0.1.0
   state:
