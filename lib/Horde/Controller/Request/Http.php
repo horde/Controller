@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2008-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2008-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -77,7 +78,7 @@ class Horde_Controller_Request_Http implements Horde_Controller_Request
     public function getRequestBody()
     {
         return new Horde_Stream_Existing(['stream' => fopen("php://input", "r")]);
-    }    
+    }
 
     public function getCookieVars()
     {
@@ -165,7 +166,7 @@ class Horde_Controller_Request_Http implements Horde_Controller_Request
             return array_change_key_case(getallheaders(), CASE_LOWER);
         }
 
-        $result = array();
+        $result = [];
         $server = $this->getServerVars();
         reset($server);
         foreach ($server as $key => $value) {

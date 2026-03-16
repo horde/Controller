@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Test the mock request handler.
  *
@@ -10,20 +11,23 @@
  * @author     Gunnar Wrobel <wrobel@pardus.de>
  * @license    http://www.horde.org/licenses/bsd
  */
+
 namespace Horde\Controller;
+
 use Horde_Test_Case as TestCase;
-use \Horde_Controller_Request_Mock;
+use Horde_Controller_Request_Mock;
 
 /**
  * Test the mock request handler.
  *
- * Copyright 2011-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2011-2026 Horde LLC (http://www.horde.org/)
  *
  * @category   Horde
  * @package    Controller
  * @subpackage UnitTests
  * @author     Gunnar Wrobel <wrobel@pardus.de>
  * @license    http://www.horde.org/licenses/bsd
+ * @coversNothing
  */
 class MockRequestTest extends TestCase
 {
@@ -43,7 +47,7 @@ class MockRequestTest extends TestCase
     public function testGetPathRedirectUrl()
     {
         $r = new Horde_Controller_Request_Mock(
-            array('SERVER' => array('REDIRECT_URL' => 'RE'))
+            ['SERVER' => ['REDIRECT_URL' => 'RE']]
         );
         $this->assertEquals('RE', $r->getPath());
     }
@@ -51,7 +55,7 @@ class MockRequestTest extends TestCase
     public function testGetPathRequestUri()
     {
         $r = new Horde_Controller_Request_Mock(
-            array('SERVER' => array('REQUEST_URI' => 'RU'))
+            ['SERVER' => ['REQUEST_URI' => 'RU']]
         );
         $this->assertEquals('RU', $r->getPath());
     }
@@ -61,35 +65,35 @@ class MockRequestTest extends TestCase
      */
     public function testGetGetVars($method, $key, $value)
     {
-        $r = new Horde_Controller_Request_Mock(array($key => $value));
+        $r = new Horde_Controller_Request_Mock([$key => $value]);
         $this->assertEquals($value, $r->{$method}());
     }
 
     public function provideGets()
     {
-        return array(
-            array('getGetVars', 'GET', array('X' => 'Y')),
-            array('getFileVars', 'files', array('X' => 'Y')),
-            array('getServerVars', 'server', array('X' => 'Y')),
-            array('getPostVars', 'POST', array('X' => 'Y')),
-            array('getCookieVars', 'cookie', array('X' => 'Y')),
-            array('getRequestVars', 'REQUEST', array('X' => 'Y')),
-        );
+        return [
+            ['getGetVars', 'GET', ['X' => 'Y']],
+            ['getFileVars', 'files', ['X' => 'Y']],
+            ['getServerVars', 'server', ['X' => 'Y']],
+            ['getPostVars', 'POST', ['X' => 'Y']],
+            ['getCookieVars', 'cookie', ['X' => 'Y']],
+            ['getRequestVars', 'REQUEST', ['X' => 'Y']],
+        ];
     }
 
     public function testGetHeaders()
     {
         $r = new Horde_Controller_Request_Mock(
-            array('SERVER' => array('HTTP_TEST' => 'test'))
+            ['SERVER' => ['HTTP_TEST' => 'test']]
         );
-        $this->assertEquals(array('test' => 'test'), $r->getHeaders());
+        $this->assertEquals(['test' => 'test'], $r->getHeaders());
     }
 
     public function testGetHeaderNames()
     {
         $r = new Horde_Controller_Request_Mock(
-            array('SERVER' => array('HTTP_TEST' => 'test'))
+            ['SERVER' => ['HTTP_TEST' => 'test']]
         );
-        $this->assertEquals(array('test'), $r->getHeaderNames());
+        $this->assertEquals(['test'], $r->getHeaderNames());
     }
 }

@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2008-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2008-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -24,8 +25,8 @@
  */
 interface Horde_Controller_PreFilter
 {
-    const REQUEST_HANDLED = true;
-    const REQUEST_CONTINUE = false;
+    public const REQUEST_HANDLED = true;
+    public const REQUEST_CONTINUE = false;
 
     public function processRequest(Horde_Controller_Request $request, Horde_Controller_Response $response, Horde_Controller $controller);
 }

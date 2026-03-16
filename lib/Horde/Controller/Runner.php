@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2008-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2008-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -29,10 +30,11 @@ class Horde_Controller_Runner
         $this->_logger = $logger;
     }
 
-    public function execute(Horde_Injector $injector,
-                            Horde_Controller_Request $request,
-                            Horde_Controller_RequestConfiguration $config)
-    {
+    public function execute(
+        Horde_Injector $injector,
+        Horde_Controller_Request $request,
+        Horde_Controller_RequestConfiguration $config
+    ) {
         $this->_logger->debug('RequestConfiguration in Horde_Controller_Runner: ' . print_r($config, true));
 
         $exporter = $injector->getInstance($config->getSettingsExporterName());

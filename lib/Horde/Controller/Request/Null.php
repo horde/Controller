@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2008-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2008-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -26,70 +27,48 @@ class Horde_Controller_Request_Null implements Horde_Controller_Request
 {
     /**
      */
-    public function getMethod()
-    {
-    }
+    public function getMethod() {}
 
     /**
      */
-    public function getPath()
-    {
-    }
+    public function getPath() {}
 
     /**
      */
-    public function getParameters()
-    {
-    }
+    public function getParameters() {}
 
     /**
      */
-    public function getGetVars()
-    {
-    }
+    public function getGetVars() {}
 
     /**
      */
-    public function getFileVars()
-    {
-    }
+    public function getFileVars() {}
 
     /**
      */
-    public function getServerVars()
-    {
-    }
+    public function getServerVars() {}
 
     /**
      */
-    public function getPostVars()
-    {
-    }
+    public function getPostVars() {}
 
     /**
      */
-    public function getCookieVars()
-    {
-    }
+    public function getCookieVars() {}
 
     /**
      */
-    public function getRequestVars()
-    {
-    }
+    public function getRequestVars() {}
 
     /**
      */
-    public function getSessionId()
-    {
-    }
-    
+    public function getSessionId() {}
+
     /**
      * The request body if it is not form-encoded
      * @returns Horde_Stream
      */
-    public function getRequestBody()
-    {
-    }
-    
+    public function getRequestBody() {}
+
 }

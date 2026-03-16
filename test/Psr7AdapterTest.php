@@ -6,9 +6,11 @@ use Horde_Test_Case as HordeTestCase;
 use Horde\Http\ResponseFactory;
 use Horde\Http\StreamFactory;
 use Horde_Controller_Response as H5Response;
-
 use Horde\Controller\Response\Psr7Adapter;
 
+/**
+ * @coversNothing
+ */
 class Psr7AdapterTest extends HordeTestCase
 {
     protected function setUp(): void

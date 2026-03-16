@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2008-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2008-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -43,7 +44,7 @@ class Horde_Controller_UrlWriter
      * @param  Horde_Routes_Utils  $utils     Route utilities
      * @param  array               $defaults  Defaults to merge for urlFor()
      */
-    public function __construct(Horde_Routes_Utils $utils, $defaults = array())
+    public function __construct(Horde_Routes_Utils $utils, $defaults = [])
     {
         $this->_utils = $utils;
         $this->_defaults = $defaults;
@@ -56,13 +57,15 @@ class Horde_Controller_UrlWriter
      * @param  $second  mixed
      * @return string
      */
-    public function urlFor($first, $second = array())
+    public function urlFor($first, $second = [])
     {
         // anonymous route: serialize to params & merge defaults
         //   urlFor(array('controller' => 'books'))
         if (is_array($first)) {
-            $first = array_merge($this->_defaults,
-                                 $this->_serializeToParams($first));
+            $first = array_merge(
+                $this->_defaults,
+                $this->_serializeToParams($first)
+            );
         }
 
         // named route: serialize to params only (no merge)
@@ -72,7 +75,7 @@ class Horde_Controller_UrlWriter
         }
 
         // url generation "route memory" is not useful here
-        $this->_utils->mapperDict = array();
+        $this->_utils->mapperDict = [];
 
         // generate url
         return $this->_utils->urlFor($first, $second);

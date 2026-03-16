@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2008-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2008-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
@@ -34,16 +35,16 @@ class Horde_Controller_Request_Mock extends Horde_Controller_Request_Http
      *
      * @param array $vars  The request variables.
      */
-    public function __construct($vars = array())
+    public function __construct($vars = [])
     {
         $this->setVars($vars);
         $server = $this->getServerVars();
         if (!empty($server['REDIRECT_URL'])) {
             $this->setPath($server['REDIRECT_URL']);
-        } else if (!empty($server['REQUEST_URI'])) {
+        } elseif (!empty($server['REQUEST_URI'])) {
             $this->setPath($server['REQUEST_URI']);
         }
-    } 
+    }
 
     /**
      * Set the request variables GET, POST, COOKIE, SERVER, REQUEST etc.
@@ -98,13 +99,13 @@ class Horde_Controller_Request_Mock extends Horde_Controller_Request_Http
     {
         return $this->getVars('REQUEST');
     }
-    
+
     /**
      * The request body if it is not form-encoded
      * @returns Horde_Stream
      */
     public function getRequestBody()
     {
-        return new Horde_Stream_String(array('string' => $this->getVars('REQUEST')));
+        return new Horde_Stream_String(['string' => $this->getVars('REQUEST')]);
     }
 }
