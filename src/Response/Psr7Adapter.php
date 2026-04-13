@@ -6,7 +6,7 @@
  * See the enclosed file LICENSE for license information (BSD). If you
  * did not receive this file, see http://www.horde.org/licenses/bsd.
  *
- * @author   Ralf Lang <lang@b1-systems.de>
+ * @author   Ralf Lang <ralf.lang@ralf-lang.de>
  * @category Horde
  * @license  http://www.horde.org/licenses/bsd BSD
  * @package  Controller
@@ -22,7 +22,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 /**
  * Create a PSR-7 Response from a H5 Controller Response
  *
- * @author   Ralf Lang <lang@b1-systems.de>
+ * @author   Ralf Lang <ralf.lang@ralf-lang.de>
  * @category  Horde
  * @copyright 2008-2021 Horde LLC
  * @license   http://www.horde.org/licenses/bsd BSD
